@@ -1,0 +1,19 @@
+
+.logo_effect{
+    border-bottom: 5px solid rgb(16, 184, 16);
+    background: rgba(0, 0, 0, 0);
+    color:black;
+    border-radius: 10px;
+}
+.logo_effect:hover{
+    border-top: 5px solid rgb(16, 184, 16);
+    border-bottom: 0;
+}
+.logo{
+    border-bottom: 5px solid rgb(16, 184, 16);
+}
+.logo:hover{
+    border-top: 5px solid rgb(16, 184, 16);
+    border-bottom: 0;
+}
+
