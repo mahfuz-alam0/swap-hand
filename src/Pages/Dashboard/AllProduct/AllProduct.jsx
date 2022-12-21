@@ -8,14 +8,12 @@ import SingleProduct from './SingleProduct';
 const AllProduct = () => {
 
     useTitle("All Product")
-
     const { user } = React.useContext(AuthContext);
-
     const email = user?.email;
 
     const { data: products = [], isLoading } = useQuery({
         queryKey: ['allProducts'],
-        queryFn: async () => {  
+        queryFn: async () => {
             const response = await fetch(`https://swap-hand-server-hasibul240.vercel.app/my-products/${email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('access_token')}`

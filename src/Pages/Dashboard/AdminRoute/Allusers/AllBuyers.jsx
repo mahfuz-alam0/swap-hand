@@ -16,8 +16,6 @@ const AllBuyers = () => {
         }
     })
 
-
-
     return (
         <div>
             <div className="md:ml-5 my-5 overflow-x-auto">

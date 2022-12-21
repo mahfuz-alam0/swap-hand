@@ -10,7 +10,6 @@ const AllReports = () => {
             .then(data => setReports(data))
     }, [])
 
-
     return (
         <div className='grid lg:grid-cols-3 ml-5 my-5 gap-5 md:grid-col2 sm:grid-cols-2 grid-cols-1'>
             {

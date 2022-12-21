@@ -27,7 +27,7 @@ const SignUp = () => {
 
         setSignUPError('');
         const image = data.image[0];
-        
+
         const formData = new FormData();
         formData.append('image', image);
         const url = `https://api.imgbb.com/1/upload?key=${img_host_key}`;
@@ -54,7 +54,6 @@ const SignUp = () => {
                                     save_user(userDB)
                                 })
                                 .catch(err => console.log(err));
-
                         })
                         .catch(error => {
                             setSignUPError(error.message)
@@ -124,7 +123,6 @@ const SignUp = () => {
                             <option value="Seller">Seller</option>
                         </select>
                     </div>
-
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Upload Profile Picture</span>
@@ -139,8 +137,6 @@ const SignUp = () => {
                 <p>Already have an account? <Link className='text-primary hover:underline' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
                 <SocialLogin />
-                {/* <input type="file" /> */}
-
             </div>
         </div>
     );

@@ -7,7 +7,6 @@ const Private = ({children}) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
 
-
     if (loading) {
         return <div className='min-h-screen flex justify-center'><Loading /></div>
     }
@@ -17,7 +16,6 @@ const Private = ({children}) => {
     }
 
     return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
-
 };
 
 export default Private;

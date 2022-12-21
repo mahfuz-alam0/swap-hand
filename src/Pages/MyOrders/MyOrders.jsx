@@ -4,7 +4,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Myorder from './Myorder';
 
 const MyOrders = () => {
-    const {user} = React.useContext(AuthContext)
+    const { user } = React.useContext(AuthContext)
 
     const { data: orders } = useQuery({
         queryKey: ['orders'],
@@ -18,7 +18,6 @@ const MyOrders = () => {
             return data;
         }
     });
-
 
     return (
         <div className='grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 my-5'>

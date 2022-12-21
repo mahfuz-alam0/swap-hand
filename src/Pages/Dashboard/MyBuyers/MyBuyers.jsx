@@ -7,7 +7,6 @@ const MyBuyers = () => {
     const { user } = React.useContext(AuthContext);
     const [orders, setOrders] = React.useState([]);
 
-
     React.useEffect(() => {
         fetch(`https://swap-hand-server-hasibul240.vercel.app/buyers-orders/${user?.email}`, {
             headers: {
@@ -18,9 +17,6 @@ const MyBuyers = () => {
                 setOrders(data)
             })
     }, [user?.email])
-
-
-
 
     return (
         <div>

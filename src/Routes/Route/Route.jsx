@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path: "/category/:category",
                 element: <ProductByCategory />,
-                loader: ({params})=>fetch(`https://swap-hand-server-hasibul240.vercel.app/category/${params.category}`)
+                loader: ({ params }) => fetch(`https://swap-hand-server-hasibul240.vercel.app/category/${params.category}`)
             },
             {
                 path: "/push-advertise/:id",
@@ -97,19 +97,19 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path: "/dashboard-admin",
-                        element: <Admin><AllBuyers/></Admin>,
+                        element: <Admin><AllBuyers /></Admin>,
                     },
                     {
                         path: "/dashboard-admin/allusers",
-                        element: <Admin><AllBuyers/></Admin>,
+                        element: <Admin><AllBuyers /></Admin>,
                     },
                     {
                         path: "/dashboard-admin/allseller",
-                        element: <Admin><AllSeller/></Admin>,
+                        element: <Admin><AllSeller /></Admin>,
                     },
                     {
                         path: "/dashboard-admin/allreport",
-                        element: <Admin><AllReports/></Admin>,
+                        element: <Admin><AllReports /></Admin>,
                     },
                 ]
             },

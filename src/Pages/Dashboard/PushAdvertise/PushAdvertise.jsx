@@ -8,14 +8,11 @@ import ChackoutAdd from './ChackoutAdd';
 const stripePromise = loadStripe(process.env.REACT_APP__Stripe_Pk);
 
 const PushAdvertise = () => {
-    useTitle("Push Advertise")
-    
-    const data = useLoaderData();
-    
 
+    useTitle("Push Advertise")
+    const data = useLoaderData();
     const { productName, price } = data;
     const push_price = { price: 5 };
-
 
     return (
         <div className="card max-w-[500px] mx-auto my-5 shadow-xl bg-green-100">
@@ -29,7 +26,6 @@ const PushAdvertise = () => {
                             <ChackoutAdd data={data} push_price={push_price} />
                         </Elements>
                     </div>
-                    {/* <button onClick={handlesubmit} className="btn btn-primary text-black hover:text-white hover:bg-green-500 hover:border-green-600 bg-green-200 border-green-400 w-full">Push Now</button> */}
                 </div>
             </div>
         </div>

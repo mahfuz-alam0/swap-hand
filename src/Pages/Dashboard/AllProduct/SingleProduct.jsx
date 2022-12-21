@@ -1,13 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../AuthProvider/AuthProvider';
-import useSeller from '../../../hooks/useSeller';
 
 const SingleProduct = ({ product }) => {
-    const { user } = React.useContext(AuthContext);
-
-    const [isSeller] = useSeller(user?.email);
+   
     const [seller_name, setSeller_name] = React.useState('');
     const [seller_image, setSeller_image] = React.useState('');
     const [isvarify, setisvarify] = React.useState('');
@@ -28,7 +24,6 @@ const SingleProduct = ({ product }) => {
         }
     });
 
-    //seller name from seller_info
     React.useEffect(() => {
         for (const key in seller_info) {
             setSeller_name(seller_info[key].name);
@@ -36,7 +31,6 @@ const SingleProduct = ({ product }) => {
             setisvarify(seller_info[key].isVarify);
         }
     }, [seller_info]);
-
 
     return (
         <div className="w-full card card-compact bg-green-100 shadow-xl">

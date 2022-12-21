@@ -1,8 +1,8 @@
 import React from 'react';
 
 const MyBuyer = ({ order }) => {
-    const [user,setuser]= React.useState({})
 
+    const [user, setuser] = React.useState({});
     const { payment, price, address, buyer, productName } = order;
     
     React.useEffect(() => {
@@ -11,7 +11,6 @@ const MyBuyer = ({ order }) => {
             .then(data => setuser(data))
     }, [buyer])
 
-   
     return (
         <tr className="hover">
 

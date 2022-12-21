@@ -17,7 +17,6 @@ const AllSeller = () => {
         }
     })
 
-
     const handleverify = (id) => { 
 
         fetch(`https://swap-hand-server-hasibul240.vercel.app/sellers/${id}`, {

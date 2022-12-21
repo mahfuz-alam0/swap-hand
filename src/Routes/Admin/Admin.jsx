@@ -6,10 +6,8 @@ import Loading from '../../Shared/Loading/Loading';
 
 const Admin = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
-
     const [isAdmin, sellerLoading] = useAdmin(user?.email);
     const location = useLocation();
-
 
     if (loading || sellerLoading) {
         return <div className='min-h-screen flex justify-center'><Loading /></div>

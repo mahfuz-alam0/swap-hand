@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Report = () => {
-    const {user} = React.useContext(AuthContext);
+    const { user } = React.useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [loggingIn, setLoggingIn] = React.useState(false);
     const navigate = useNavigate();
@@ -13,12 +13,6 @@ const Report = () => {
 
     const handlesubmit = (data) => {
         setLoggingIn(true);
-        
-        const report = {
-            topic: data.problem,
-            complain: data.complain,
-            reporter: user?.email
-        }
 
         fetch('https://swap-hand-server-hasibul240.vercel.app/report', {
             method: 'POST',
@@ -42,7 +36,7 @@ const Report = () => {
             <div className='bg-green-100 rounded-xl drop-shadow-md w-full p-7'>
                 <h2 className='text-3xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handlesubmit)}>
-                    
+
                     <div className="form-control w-full ">
                         <label className="label"> <span className="label-text">Problem</span></label>
                         <input type="text"

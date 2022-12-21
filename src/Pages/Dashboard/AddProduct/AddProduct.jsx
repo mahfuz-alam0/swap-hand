@@ -71,7 +71,7 @@ const AddProduct = () => {
                         <div className='lg:w-1/2 '>
                             <div className="form-control w-full ">
                                 <label className="label"> <span className="label-text">Product Name</span></label>
-                                <input type="text" {...register("productName", { required: "Product Name is Required" })}
+                                <input type="text" {...register("productName", { required: "Product name is required" })}
                                     className="input input-bordered w-full " />
                                 {errors.productName && <p className='text-red-500'>{errors.productName.message}</p>}
                             </div>
@@ -79,7 +79,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Product Price</span>
                                 </label>
-                                <input type="text" {...register("price", { required: "Price is Required" })}
+                                <input type="text" {...register("price", { required: "Must add product price" })}
                                     className="input input-bordered w-full " />
                                 {errors.price && <p className='text-red-500'>{errors.price.message}</p>}
                             </div>

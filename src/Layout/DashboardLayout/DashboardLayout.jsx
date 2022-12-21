@@ -7,12 +7,12 @@ import useTitle from '../../hooks/useTitle';
 import './DashboardLayout.css';
 
 const DashboardLayout = () => {
+    
     useTitle("Dashboard")
 
     const { user } = useContext(AuthContext);
     const [isSeller] = useSeller(user?.email);
     const [isAdmin] = useAdmin(user?.email);
-
 
     return (
         <div>

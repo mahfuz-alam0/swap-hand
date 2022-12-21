@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Myorder = ({ order }) => {
-    const { _id:orderId, productId, payment } = order;
+    const { _id: orderId, productId, payment } = order;
 
     const [seller_info, setSeller_info] = React.useState([]);
     const [seller_name, setSeller_name] = React.useState('');
@@ -22,7 +22,6 @@ const Myorder = ({ order }) => {
                 setProduct(data);
             })
     }, [productId])
-
 
     React.useEffect(() => {
         fetch(`https://swap-hand-server-hasibul240.vercel.app/seller-info/${email}`, {
@@ -80,9 +79,9 @@ const Myorder = ({ order }) => {
                             </div>
                         </div>
                         {
-                            !payment? <Link to={`/payment/${orderId}`} className="btn btn-primary text-black hover:text-white hover:bg-green-500 hover:border-green-600 bg-green-200 border-green-400 btn-sm">
+                            !payment ? <Link to={`/payment/${orderId}`} className="btn btn-primary text-black hover:text-white hover:bg-green-500 hover:border-green-600 bg-green-200 border-green-400 btn-sm">
                                 pay now
-                            </Link>:<button className="btn btn-primary text-black hover:text-white hover:bg-green-500 hover:border-green-600 bg-green-200 border-green-400 btn-sm">Paid</button>
+                            </Link> : <button className="btn btn-primary text-black hover:text-white hover:bg-green-500 hover:border-green-600 bg-green-200 border-green-400 btn-sm">Paid</button>
                         }
 
                     </div>
